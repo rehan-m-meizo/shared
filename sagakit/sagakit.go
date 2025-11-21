@@ -89,3 +89,18 @@ func StartDispatcher(ctx context.Context) error {
 func Publish(ctx context.Context, topic string, payload any) error {
 	return PublishWithMeta(ctx, topic, payload, nil)
 }
+
+// GetGlobalStore returns the global outbox store
+func GetGlobalStore() outbox.Store {
+	return globalStore
+}
+
+// GetLogger returns the global logger
+func GetLogger() watermill.LoggerAdapter {
+	return logger
+}
+
+// GetDB returns the global database
+func GetDB() db.DB {
+	return globalDB
+}
