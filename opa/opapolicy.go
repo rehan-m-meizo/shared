@@ -1,0 +1,5 @@
+package opa
+
+func CheckFormAccess() {
+
+}
